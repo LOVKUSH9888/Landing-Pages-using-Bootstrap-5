@@ -17,20 +17,49 @@
     />
 
     <style>
+
+        /* Targeting the Navbar */
+        .navbar {
+            background-color: black;
+            height: 84px;
+        }
       .love_cont {
+        position: relative; /* Add this to set the position of the pseudo-element */
+        height: 330px;
+        z-index: -1; /* Ensure the background is behind the content */
+      }
+
+      .love_cont::before {
+        content: "";
         background-image: url(img/carousel-2.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 330px;
+        filter: brightness(
+          30%
+        ); /* Apply the brightness filter to the pseudo-element */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Ensure the pseudo-element is behind the content */
       }
     </style>
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Project-1</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
@@ -90,25 +119,181 @@
 
     <!-- Background image -->
     <div class="container-fluid">
-        <div class="row">
-          <div class="col text-center text-light love_cont py-5">
-            <h1>Contact</h1>
-            <ul class="nav d-flex justify-content-center align-items-center">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home /</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Page /</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
+      <div class="row">
+        <div class="col text-center text-light love_cont py-5">
+          <h1>Contact</h1>
+          <ul class="nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home /</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Page /</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Part  -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col text-center">
+          <button>button</button>
+          <h1>Contact for any query</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section part -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27448.221959965103!2d76.8177531!3d30.689495450000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1697291426301!5m2!1sen!2sin"
+            width="600"
+            height="450"
+          ></iframe>
+        </div>
+        <div class="col">
+          <p>
+            The contact form is currently inactive. Get a functional and working
+            contact form with Ajax & PHP in a few minutes. Just copy and paste
+            the files, add a little code and you're done. Download Now.
+          </p>
+
+          <!-- Form -->
+          <form>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Subject"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Example textarea</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer-1 -->
+    <footer class="my-5">
+      <div class="container">
+        <div class="row love_cont py-5 text-light">
+          <div class="col">
+            <h2>About Love</h2>
+            <p>
+              Nostrud Exertation Ullamco Labor Nisi Aliquip Ex Ea Commodo
+              Consequat Duis Aute Irure Dolor In Reprehenderit In Voluptate
+              Velit Esse Cillum Dolore. <br />
+              PestKit © 2023 All Right Reserved.
+            </p>
+          </div>
+          <div class="col">
+            <nav class="nav flex-column">
+              <h3>Usefull Link</h3>
+
+              <a class="nav-link" aria-current="page" href="#">
+                <i class="fa-solid fa-check"></i> Active</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-check"></i> Contact Us
+              </a>
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-check"></i> Our Services</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-check"></i> Terms & Condition</a
+              >
+            </nav>
+          </div>
+          <div class="col">
+            <nav class="nav flex-column">
+              <h3>Services Link</h3>
+
+              <a class="nav-link" aria-current="page" href="#">
+                <i class="fa-solid fa-check"></i> Active</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-check"></i> Contact Us
+              </a>
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-check"></i> Our Services</a
+              >
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-check"></i> Terms & Condition</a
+              >
+            </nav>
+          </div>
+          <div class="col">
+            <h3>Services Link</h3>
+            <form>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Subject"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
-      
-
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
